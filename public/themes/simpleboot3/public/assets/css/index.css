@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding:0;
+}
+.index_head{
+    position: relative;
+    width:100%;
+    height:0;
+    padding-top:17.9%;
+    background: url("../images/index_bg.jpg") no-repeat;
+    -webkit-background-size:100% auto;
+    background-size:100% auto;
+}
+.index_head .pz_logo{
+    width:21%;
+    position: absolute;
+    top:20%;
+    left:21%;
+}
+.index_head .pz_logo2{
+    width:15.8%;
+    position: absolute;
+    top:25%;
+    left:43%;
+}
+.index_head .index_zsdm{
+    position: absolute;
+    top:50%;
+    left:25%;
+    color: #fff;
+}
+.index_head .index_zsdm span{
+    display: block;
+}
+.index_head .index_zsdm .index_dm{
+    font-size: 2.5em;
+}
