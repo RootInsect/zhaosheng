@@ -22,4 +22,13 @@ class IndexController extends HomeBaseController
     public function index1(){
         return $this->fetch(':index1');
     }
+
+    public function index2(){
+        return $this->fetch(':index2');
+    }
+
+    public function actionList(){
+        $id=input('id');
+        return $this->fetch(':actionList');
+    }
 }

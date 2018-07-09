@@ -1,0 +1,210 @@
+/*清除浮动*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
+#con{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+#con #list{
+    position: absolute;
+    left: 0;
+    height:100%;
+}
+#con #list .img{
+    width:100%;
+    height: 100%;
+    border: none;
+    float: left;
+}
+#con #list .img img{
+    display: block;
+    width: 100%;
+    height:100%;
+    border: none;
+    margin:auto;
+}
+/*上面的button*/
+.b1{
+    display: block;
+}
+.b2{
+    display: none;
+}
+.black{
+    padding-left: 0;
+    padding-top:20px;
+    background: #f5f5f5;
+}
+.black .black-top{
+    width:100%;
+    background: #fff;
+    padding:5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.black .black-bottom{
+    width:100%;
+    background: #fff;
+    padding:10px;
+    box-sizing: border-box;
+}
+.black .black-bottom button{
+    margin-bottom:0px !important;
+}
+.black button{
+    height:70px;
+    font-size: 15px;
+    text-align: left;
+    padding-left:5%;
+}
+.black button img{
+    margin-right:10px;
+    width:41px;
+    height:45px;
+}
+.black .button-red{
+    background: #e75847;
+}
+.black .button-violet{
+    background: #967dd9;
+}
+.black .button-green{
+    background: #2eb398;
+}
+.black .button-blue{
+    background: #43b0d9;
+}
+.black .button-yellow{
+    background: #8db960;
+}
+.black .button-small{
+    width:calc(50% - 7.5px);
+    margin-bottom: 15px;
+}
+.black .button-big{
+    width:100%;
+}
+.floatright{
+    float: right;
+}
+/*下面的各省市联系人和联系我们*/
+.link{
+    background: #f5f5f5;
+    padding:15px;
+    box-sizing: border-box;
+}
+.link .linkman-content{
+    width:90%;
+    background: #fff;
+    margin:10px 0;
+}
+.linkman-content span{
+    margin: 5px;
+    display: block;
+    float: left;
+}
+.callme-content{
+    padding:5px 0;
+}
+.callme-content *{
+    font-size: 15px;
+    font-weight: bold;
+}
+.callme-content table{
+    width:70%;
+    float: left;
+}
+.callme-content .img{
+    width:28%;
+    float: left;
+}
+.callme-content .img img{
+    width:100%;
+}
+.callme-content .img span{
+    text-align: center;
+}
+.callme-content td{
+    padding:0 0 5px 0;
+}
+.callme-content span{
+    display: block;
+}
+.man{
+    font-size: 15px !important;
+    margin-left: 0 !important;
+}
+
+.foot-left {
+    float: left;
+    padding-top: 32px;
+    box-sizing: border-box;
+    max-width: 50%;
+
+}
+.foot-left img{
+    width:80%;
+    margin-bottom: 32px;
+}
+.foot-left .p{
+    color: #fff;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+.foot-right {
+    float: left;
+    max-width: 40%;
+    padding-top: 32px;
+    padding-left: 32px;
+    box-sizing: border-box;
+}
+.foot-right *{
+    color: #fff;
+    font-weight: bold;
+}
+.foot-right .foot-head {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.foot-right ul{
+    margin-bottom: 10px;
+}
+.foot-right li{
+    float:left;
+    width:50%;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .black button{
+        padding-left:0;
+    }
+}
+@media screen and (max-width: 980px) {
+    .black button{
+        padding-left:5%;
+    }
+    .b1{
+        display: none;
+    }
+    .b2{
+        display: block;
+    }
+    .foot-left{
+        display: none;
+    }
+    .foot-right{
+        max-width:100%;
+    }
+}

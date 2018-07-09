@@ -1,188 +1,651 @@
 <!DOCTYPE html>
+<!-- saved from url=(0035)http://zhaosheng.imust.cn/index.htm -->
 <html>
+
 <head>
-    <title>首页 {$site_info.site_name|default=''}</title>
-    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
-    <meta name="description" content="{$site_info.site_seo_description|default=''}">
-    <include file="public@head"/>
-    <link href="__TMPL__/public/assets/css/slippry/slippry.css" rel="stylesheet">
-    <style>
-        .caption-wraper {
-            position: absolute;
-            left: 50%;
-            bottom: 2em;
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>招生信息网</title>
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/public.css">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/style.css?{$rand}">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/index.css?{$rand}">
+
+    <!--Announced by Visual SiteBuilder 9-->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/_sitegray_d.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" defer="" async="" src="__TMPL__/public/pzzs/js/uaest.js"></script>
+    <script language="javascript" src="__TMPL__/public/pzzs/js/_sitegray.js"></script>
+    <!-- CustomerNO:7765626265723230797847545350554703030000 -->
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/pzzs/css/index.vsb.css">
+    <meta name="keywords" content="平顶山工业职业技术学院,专科,招生">
+    <script type="text/javascript" src="__TMPL__/public/pzzs/js/counter.js"></script>
+    <!--<script type="text/javascript">
+        _jsq_(1001, '/index.jsp', -1, 1352980990)
+    </script>-->
+    <!--<style>
+        @font-face {
+            font-family: uc-nexus-iconfont;
+            src: url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.woff) format('woff'), url(chrome-extension://pogijhnlcfmcppgimcaccdkmbedjkmhi/res/font_9qmmi8b8jsxxbt9.ttf) format('truetype')
         }
-
-        .caption-wraper .caption {
-            position: relative;
-            left: -50%;
-            background-color: rgba(0, 0, 0, 0.54);
-            padding: 0.4em 1em;
-            color: #fff;
-            -webkit-border-radius: 1.2em;
-            -moz-border-radius: 1.2em;
-            -ms-border-radius: 1.2em;
-            -o-border-radius: 1.2em;
-            border-radius: 1.2em;
-        }
-
-        .tc-gridbox {
-            margin: 0;
-        }
-
-        @media (max-width: 767px) {
-            .caption-wraper {
-                left: 0;
-                bottom: 0.4em;
-            }
-
-            .caption-wraper .caption {
-                left: 0;
-                padding: 0.2em 0.4em;
-                font-size: 0.92em;
-                -webkit-border-radius: 0;
-                -moz-border-radius: 0;
-                -ms-border-radius: 0;
-                -o-border-radius: 0;
-                border-radius: 0;
-            }
-        }
-
-    </style>
-    <hook name="before_head_end"/>
+    </style>-->
 </head>
-<body class="body-white">
-<include file="public@nav"/>
 
-<ul id="home-slider" class="list-unstyled">
-    <php>
-        $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
-    </php>
-    <slides id="$top_slide_id">
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">{$vo.title|default=''}</div>
+<body style="overflow-y: hidden;">
+<div class="main">
+    <!--黑色遮罩 start-->
+    <div class="main-mask"></div>
+    <!--黑色遮罩 end-->
+    <include file="public@header"/>
+    <!--list start-->
+    <!--图片轮播-->
+    <!--<div id="con">
+        <div id="list">
+            <div class="img">
+                <img class="lazy" src="__TMPL__/public/pzzs/img/banner1.jpg">
             </div>
-            <a href="{$vo.url|default=''}"><img src="{:cmf_get_image_url($vo.image)}" alt=""></a>
-        </li>
-    </slides>
-    <noslides id="$top_slide_id">
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
+            <div class="img">
+                <img class="lazy" src="__TMPL__/public/pzzs/img/banner2.jpg">
             </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/1.jpg" alt=""></a>
-        </li>
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
+            <div class="img">
+                <img class="lazy" src="__TMPL__/public/pzzs/img/banner3.jpg">
             </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/2.jpg" alt=""></a>
-        </li>
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
-            </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/3.jpg" alt=""></a>
-        </li>
-    </noslides>
-</ul>
-
-<div class="container">
-    <widget name="features">
-        <div>
-            <h1 class="text-center">{$widget.title}</h1>
-            <h3 class="text-center">{$widget.vars.sub_title}</h3>
         </div>
-        <php>
-            $features_count = count($widget['vars']['features']);
-            $rows = ceil($features_count/3);
-        </php>
-        <for start="1" end="$rows" comparison="elt" step="1" name="row">
-            <php>
-                $first_row = ($row-1)*3;
-                $features = array_slice($widget['vars']['features'],$first_row,3);
-            </php>
-            <div class="row">
-                <foreach name="features" item="vo">
-                    <div class="col-md-4">
-                        <h2 class="font-large nospace"><i class="fa fa-{$vo.icon}"></i> {$vo.title}</h2>
-                        <p>{$vo.content}</p>
+    </div>
+    <script>
+        var car=function(){
+            var length=$('#list>.img').length;
+            var width=$('#list>.img').width();
+            $('#list>.img').width(width);
+            var left=Math.floor($('#list').position().left-width);
+            if(left<width*(length-1)*-1){
+                $('#list').css('left',0);
+            }else{
+                $('#list').css('left',left);
+            }
+        };
+        setInterval(function(){
+            car();
+        },2000);
+    </script>-->
+    <!--end图片轮播-->
+    <div class="content clrfix">
+        <div class="list-main">
+            <!--#begineditable name="招办快讯" clone="0" namechanged="0" order="8" ispublic="0" tagname="招办快讯" viewid="125166" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box">
+                <div class="list-title">
+                    <i><img src="__TMPL__/public/pzzs/img/icon-2.png"></i>
+                    <span>招办快讯</span>
+                    <a href="#"><img src="__TMPL__/public/pzzs/img/more-icon.png"></a>
+                </div>
+                <a href="http://zhaosheng.imust.cn/zbkx/zsxc.htm"><img src="__TMPL__/public/pzzs/img/img5.jpg" class="list-img"></a>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank" title="“逐梦起航,相约科大”--科大讲堂之包头服务篇邀请函">“逐梦起航,相约科大”--科大讲堂之包头服务篇邀…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="2018年内蒙古科技大学校园开放日--“内科大与你同行”主题活动邀请函">2018年内蒙古科技大学校园开放日--“内科大与你同…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="“我的科大我代言”招生宣传形象大使招募工作实施方案">“我的科大我代言”招生宣传形象大使招募工作实施…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2018年高水平运动员招生专项测试工作结束">内蒙古科技大学2018年高水平运动员招生专项测试工…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学高考改革选考科目报送工作稳步推进">内蒙古科技大学高考改革选考科目报送工作稳步推进</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="我校2016级新生调查问卷页面已开通">我校2016级新生调查问卷页面已开通</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                _showDynClickBatch(['dynclicks_u8_2566', 'dynclicks_u8_2567', 'dynclicks_u8_2563', 'dynclicks_u8_2545', 'dynclicks_u8_2543', 'dynclicks_u8_2186'], [2566, 2567, 2563, 2545, 2543, 2186], "wbnews", 1352980990)
+            </script>
+            <!--#endeditable-->
+            <!--#begineditable name="招生政策" clone="0" namechanged="0" order="9" ispublic="0" tagname="招生政策" viewid="125167" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box">
+                <div class="list-title">
+                    <i><img src="__TMPL__/public/pzzs/img/icon-3.png"></i>
+                    <span>招生政策</span>
+                    <a href="#"><img src="__TMPL__/public/pzzs/img/more-icon.png"></a>
+                </div>
+                <a href="#"><img src="__TMPL__/public/pzzs/img/img6.jpg" class="list-img"></a>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank" title="教育部关于做好2018年普通高校招生工作的通知">教育部关于做好2018年普通高校招生工作的通知</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="教育部：2018年普通高等学校招生工作规定">教育部：2018年普通高等学校招生工作规定</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="教育部关于做好2018年重点高校招收农村和贫困地区学生工作的通知">教育部关于做好2018年重点高校招收农村和贫困地区…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2019年拟在浙招生选考科目范围">内蒙古科技大学2019年拟在浙招生选考科目范围</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="关于做好2018年高校高水平运动队有关考试招生工作的补充通知">关于做好2018年高校高水平运动队有关考试招生工作…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="教育部办公厅关于做好2018年普通高等学校部分特殊类型招生工作的通知">教育部办公厅关于做好2018年普通高等学校部分特殊…</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                _showDynClickBatch(['dynclicks_u9_2552', 'dynclicks_u9_2553', 'dynclicks_u9_2548', 'dynclicks_u9_2481', 'dynclicks_u9_2551', 'dynclicks_u9_2550'], [2552, 2553, 2548, 2481, 2551, 2550], "wbnews", 1352980990)
+            </script>
+            <!--#endeditable-->
+            <!--#begineditable name="" clone="0" namechanged="0" order="5" ispublic="0" tagname="招办公告" viewid="125163" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box black b1">
+                <!--块-->
+                <div class="black-top">
+                    <button class="button-small button-red"><i><img src="__TMPL__/public/pzzs/img/black-pingjia.png" alt=""></i>报考指南</button>
+                    <button class="button-small button-violet"><i><img src="__TMPL__/public/pzzs/img/black-word.png" alt=""></i>专业手册</button>
+                    <button class="button-small button-yellow"><i><img src="__TMPL__/public/pzzs/img/black-tubiao.png" alt=""></i>历年分数</button>
+                    <button class="button-small button-blue"><i><img src="__TMPL__/public/pzzs/img/black-book.png" alt=""></i>录取查询</button>
+                    <button class="button-big button-green"><i><img src="__TMPL__/public/pzzs/img/black-luqu.png" alt=""></i>录取通知书查询</button>
+                </div>
+                <div class="black-bottom">
+                    <button class="button-small button-red"><i><img src="__TMPL__/public/pzzs/img/black-pingjia.png" alt=""></i>五年制</button>
+                    <button class="button-small button-violet floatright"><i><img src="__TMPL__/public/pzzs/img/black-word.png" alt=""></i>成人大专</button>
+                </div>
+            </div>
+            <!--#endeditable-->
+            <!--#begineditable name="招生计划" clone="0" namechanged="0" order="7" ispublic="0" tagname="招生章程" viewid="125165" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box">
+                <div class="list-title">
+                    <i><img src="__TMPL__/public/pzzs/img/icon-6.png"></i>
+                    <span>招生计划</span>
+                    <a href="#"><img src="__TMPL__/public/pzzs/img/more-icon.png"></a>
+                </div>
+                <a href="#"><img src="__TMPL__/public/pzzs/img/img4.jpg" class="list-img"></a>
+                <ul>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2018年本专科招生计划" style="color:#FF0000">内蒙古科技大学2018年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2017年本专科招生计划">内蒙古科技大学2017年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2016年本专科招生计划">内蒙古科技大学2016年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2015年本专科招生计划">内蒙古科技大学2015年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2014年本专科招生计划">内蒙古科技大学2014年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学2013年本专科招生计划">内蒙古科技大学2013年本专科招生计划</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                _showDynClickBatch(['dynclicks_u7_2565', 'dynclicks_u7_2542', 'dynclicks_u7_2124', 'dynclicks_u7_2123', 'dynclicks_u7_2122', 'dynclicks_u7_2121'], [2565, 2542, 2124, 2123, 2122, 2121], "wbnews", 1352980990)
+            </script>
+            <!--#endeditable-->
+            <!--#begineditable name="学校概况" clone="0" namechanged="0" order="4" ispublic="0" tagname="图片新闻" viewid="125162" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box">
+                <div class="list-title">
+                    <i><img src="__TMPL__/public/pzzs/img/icon-1.png"></i>
+                    <span>单独招生</span>
+                    <a href="#"><img src="__TMPL__/public/pzzs/img/more-icon.png"></a>
+                </div>
+                <a href="#"><img src="__TMPL__/public/pzzs/img/img1.jpg" class="list-img"></a>
+
+                <ul>
+                    <li>
+                        <a href="#" target="_blank" title="武书连2018年内蒙古自治区大学综合实力排行榜">武书连2018年内蒙古自治区大学综合实力排行榜</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学学校简介">内蒙古科技大学学校简介</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学航貌">内蒙古科技大学航貌</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="内蒙古科技大学视频简介">内蒙古科技大学视频简介</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="学姐带你游科大">学姐带你游科大</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" title="2015届毕业生双选会">2015届毕业生双选会</a>
+                        <span>[2018-12-12]</span>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                _showDynClickBatch(['dynclicks_u4_2544', 'dynclicks_u4_2429', 'dynclicks_u4_2394', 'dynclicks_u4_2393', 'dynclicks_u4_2392', 'dynclicks_u4_2391'], [2544, 2429, 2394, 2393, 2392, 2391], "wbnews", 1352980990)
+            </script>
+            <!--#endeditable-->
+            <!--#begineditable name="" clone="0" namechanged="0" order="5" ispublic="0" tagname="招办公告" viewid="125163" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box black b2">
+                <!--块-->
+                <div class="black-top">
+                    <button class="button-small button-red"><i><img src="__TMPL__/public/pzzs/img/black-pingjia.png" alt=""></i>报考指南</button>
+                    <button class="button-small button-violet"><i><img src="__TMPL__/public/pzzs/img/black-word.png" alt=""></i>专业手册</button>
+                    <button class="button-small button-yellow"><i><img src="__TMPL__/public/pzzs/img/black-tubiao.png" alt=""></i>历年分数</button>
+                    <button class="button-small button-blue"><i><img src="__TMPL__/public/pzzs/img/black-book.png" alt=""></i>录取查询</button>
+                    <button class="button-big button-green"><i><img src="__TMPL__/public/pzzs/img/black-luqu.png" alt=""></i>录取通知书查询</button>
+                </div>
+                <div class="black-bottom">
+                    <button class="button-small button-red"><i><img src="__TMPL__/public/pzzs/img/black-pingjia.png" alt=""></i>五年制</button>
+                    <button class="button-small button-violet floatright"><i><img src="__TMPL__/public/pzzs/img/black-word.png" alt=""></i>成人大专</button>
+                </div>
+            </div>
+            <!--#endeditable-->
+            <!--#begineditable name="招生章程" clone="0" namechanged="0" order="6" ispublic="0" tagname="招生计划" viewid="125164" contype="" stylesysid="" layout="" action=""-->
+            <div class="list-box link">
+                <div class="linkman">
+                    <div class="list-title">
+                        <i><img src="__TMPL__/public/pzzs/img/pz-ren.png"></i>
+                        <span class="man">各地市联系人</span>
                     </div>
-                </foreach>
-            </div>
-        </for>
-
-    </widget>
-
-    <widget name="last_news">
-        <div>
-            <h1 class="text-center">{$widget.title}</h1>
-        </div>
-
-        <div class="row">
-            <php>
-                $widget["vars"]["last_news_category_id"] = empty($widget["vars"]["last_news_category_id"])?1:$widget["vars"]["last_news_category_id"];
-                $last_news_limit=4;
-            </php>
-            <portal:articles limit="$last_news_limit" order="post.published_time DESC"
-                             categoryIds="$widget.vars.last_news_category_id">
-                <div class="col-md-3">
-                    <div class="tc-gridbox">
-                        <div class="header">
-                            <div class="item-image">
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
-                                    <present name="vo.more.thumbnail">
-                                        <empty name="vo.more.thumbnail">
-                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
-                                                 class="img-responsive"
-                                                 alt="">
-                                            <else/>
-                                            <img src="{:cmf_get_image_url($vo.more.thumbnail)}"
-                                                 class="img-responsive"
-                                                 alt="">
-                                        </empty>
-                                        <else/>
-                                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
-                                             class="img-responsive"
-                                             alt="">
-                                    </present>
-                                </a>
-                            </div>
-                            <h3>
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
-                            </h3>
-                            <hr>
-                        </div>
-                        <div class="body">
-                            <p>
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">...</a>
-                            </p>
+                    <div class="linkman-content clearfloat">
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>平顶山</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                        <span>郑州市</span>
+                    </div>
+                </div>
+                <div class="callme">
+                    <div class="list-title">
+                        <i><img src="__TMPL__/public/pzzs/img/pz-phone.png"></i>
+                        <span class="man">联系我们</span>
+                    </div>
+                    <div class="callme-content">
+                        <table>
+                            <tr><td>招生咨询:</td><td><span>0375-2066462.</span><span>0375-7023572.</span><span>7023573</span></td></tr>
+                            <tr><td>传 真:</td><td><span>0375-2066462</span></td></tr>
+                            <tr><td>招 生QQ:</td><td><span>125918978(群1)</span><span>191455986(群2)</span></td></tr>
+                        </table>
+                        <div class="img">
+                            <img src="__TMPL__/public/pzzs/img/code.png" alt="">
+                            <span>官方微信</span>
                         </div>
                     </div>
                 </div>
-            </portal:articles>
+            </div>
+            <!--#endeditable-->
         </div>
-    </widget>
-    <include file="public@footer"/>
+    </div>
+    <!--list end-->
+
+    <!--list2 end-->
+    <!--图片滚动 start-->
+    <!--#begineditable name="校园风光" clone="0" namechanged="0" order="14" ispublic="0" tagname="校园风光" viewid="124787" contype="" stylesysid="" layout="" action=""-->
+    <div class="content">
+        <div class="school-box marginT20">
+            <div class="list-title">
+                <i><img src="__TMPL__/public/pzzs/img/icon-9.png"></i>
+                <span>校园风光</span>
+                <a href="http://zhaosheng.imust.cn/xyfg/xyfg.htm"><img src="__TMPL__/public/pzzs/img/more-icon.png"></a>
+            </div>
+            <div class="picMarquee-left">
+                <div class="bd">
+                    <div class="tempWrap" style="overflow:hidden; position:relative; width:930px">
+                        <ul class="picList" style="width: 2480px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1230px;">
+                            <li class="clone" style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/3787609542A5B1F567497B596232903C.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="图书馆内景">图书馆内景</a>
+                                </div>
+                            </li>
+
+                            <li style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/A63D813348AD47C846EE2729D9DADFF2.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="-图书馆内景-">-图书馆内景-</a>
+                                </div>
+                            </li>
+
+                            <li style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/2D5A1AB42AE361ACF65210C0804E1C0C.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="图书馆">图书馆</a>
+                                </div>
+                            </li>
+
+                            <li style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/B80E74BD85FFEA79468D8C260D90AE8D.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="逸夫楼-毕业">逸夫楼-毕业</a>
+                                </div>
+                            </li>
+
+                            <li style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/3787609542A5B1F567497B596232903C.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="图书馆内景">图书馆内景</a>
+                                </div>
+                            </li>
+
+                            <li class="clone" style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/A63D813348AD47C846EE2729D9DADFF2.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="-图书馆内景-">-图书馆内景-</a>
+                                </div>
+                            </li>
+                            <li class="clone" style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/2D5A1AB42AE361ACF65210C0804E1C0C.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="图书馆">图书馆</a>
+                                </div>
+                            </li>
+                            <li class="clone" style="float: left; width: 282px;">
+                                <div class="pic">
+                                    <a href="#"><img src="__TMPL__/public/pzzs/img/B80E74BD85FFEA79468D8C260D90AE8D.jpg" style="width:282px;height:224px"></a>
+                                </div>
+                                <div class="title">
+                                    <a href="#" target="_blank" title="逸夫楼-毕业">逸夫楼-毕业</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        _showDynClickBatch(['dynclicks_u14_1851', 'dynclicks_u14_1845', 'dynclicks_u14_1841', 'dynclicks_u14_1827'], [1851, 1845, 1841, 1827], "wbnews", 1352980990)
+    </script>
+    <!--#endeditable-->
+    <!--图片滚动 end-->
+    <!--友链 start-->
+    <div class="content marginT20">
+        <!--#begineditable name="友情链接" clone="0" namechanged="0" order="15" ispublic="0" tagname="友情链接" viewid="124788" contype="" stylesysid="" layout="" action=""-->
+        <div class="link-box clrfix">
+            <a href="http://www.moe.edu.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19867)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl1.jpg">
+            </a>
+
+            <a href="http://gaokao.chsi.com.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19868)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl2.jpg">
+            </a>
+
+            <a href="http://www.eol.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19869)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl3.jpg">
+            </a>
+
+            <a href="http://www.nm.zsks.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19870)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl4.jpg">
+            </a>
+
+            <a href="http://www.baotou.gov.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19871)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl5.jpg">
+            </a>
+
+            <!--<a href="http://www.imust.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19872)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl6.jpg">
+            </a>
+
+            <a href="http://graduate.imust.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19873)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl7.jpg">
+            </a>
+
+            <a href="http://dadm.imust.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19874)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl8.jpg">
+            </a>
+
+            <a href="http://gaokao789.com/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19875)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl9.jpg">
+            </a>
+
+            <a href="http://aao.imust.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 19876)" target="_blank">
+                <img src="__TMPL__/public/pzzs/img/yl10.jpg">
+            </a>-->
+
+        </div>
+        <!--#endeditable-->
+    </div>
+    <!--友链 end-->
+    <!--底部 start-->
+    <div class="foot-nav marginT20">
+        <div class="clrfix content">
+            <div class="foot-left">
+                <img src="__TMPL__/public/pzzs/img/pz_logo3.png" alt="">
+                <p class="p">咨询电话：0371-2066462/0371-7023572/0371-7023573(招生)</p>
+                <p class="p">地址：</p>
+            </div>
+            <div class="foot-right">
+                <h2 class="foot-head">院系设置</h2>
+                <ul>
+                    <li>机械工程学院</li>
+                    <li>电力工程学院</li>
+                    <li>计算机与软件工程学院</li>
+                    <li>自动化与信息工程学院</li>
+                    <li>资源开发学院</li>
+                    <li>经管学院</li>
+                    <li>艺术学院</li>
+                    <li>国际合作学院</li>
+                    <li>化工学院学院</li>
+                    <li>文教部</li>
+                    <li>思政部</li>
+                    <li>网络教育学院</li>
+                    <li>航空学院</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <!--底部 end-->
+    <script src="__TMPL__/public/pzzs/js/bdtxk4.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__TMPL__/public/pzzs/js/bdtxk5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__TMPL__/public/pzzs/js/bdtxk7.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__TMPL__/public/pzzs/js/bdtxk6.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__TMPL__/public/pzzs/js/bdtxk3.js?{$rand}" type="text/javascript" charset="utf-8"></script>
+    <script src="__TMPL__/public/pzzs/js/bdtxk10.js" type="text/javascript" charset="utf-8"></script>
+
 </div>
-<!-- /container -->
-<include file="public@scripts"/>
-<script src="__TMPL__/public/assets/js/slippry.min.js"></script>
-<script>
-    $(function () {
-        $("#home-slider").slippry({
-            transition: 'fade',
-            useCSS: true,
-            captions: false,
-            speed: 1000,
-            pause: 3000,
-            auto: true,
-            preload: 'visible'
-        });
-        $("#home-slider").show();
-    });
-</script>
-<hook name="before_body_end"/>
 </body>
+<style type="text/css">
+    #yddContainer {
+        display: block;
+        font-family: Microsoft YaHei;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -4px;
+        left: -4px;
+        font-size: 12px;
+        border: 1px solid
+    }
+
+    #yddTop {
+        display: block;
+        height: 22px
+    }
+
+    #yddTopBorderlr {
+        display: block;
+        position: static;
+        height: 17px;
+        padding: 2px 28px;
+        line-height: 17px;
+        font-size: 12px;
+        color: #5079bb;
+        font-weight: bold;
+        border-style: none solid;
+        border-width: 1px
+    }
+
+    #yddTopBorderlr .ydd-sp {
+        position: absolute;
+        top: 2px;
+        height: 0;
+        overflow: hidden
+    }
+
+    .ydd-icon {
+        left: 5px;
+        width: 17px;
+        padding: 0px 0px 0px 0px;
+        padding-top: 17px;
+        background-position: -16px -44px
+    }
+
+    .ydd-close {
+        right: 5px;
+        width: 16px;
+        padding-top: 16px;
+        background-position: left -44px
+    }
+
+    #yddKeyTitle {
+        float: left;
+        text-decoration: none
+    }
+
+    #yddMiddle {
+        display: block;
+        margin-bottom: 10px
+    }
+
+    .ydd-tabs {
+        display: block;
+        margin: 5px 0;
+        padding: 0 5px;
+        height: 18px;
+        border-bottom: 1px solid
+    }
+
+    .ydd-tab {
+        display: block;
+        float: left;
+        height: 18px;
+        margin: 0 5px -1px 0;
+        padding: 0 4px;
+        line-height: 18px;
+        border: 1px solid;
+        border-bottom: none
+    }
+
+    .ydd-trans-container {
+        display: block;
+        line-height: 160%
+    }
+
+    .ydd-trans-container a {
+        text-decoration: none;
+    }
+
+    #yddBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        overflow: hidden;
+        background-position: left -22px
+    }
+
+    .ydd-padding010 {
+        padding: 0 10px
+    }
+
+    #yddWrapper {
+        color: #252525;
+        z-index: 10001;
+        background: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);
+    }
+
+    #yddContainer {
+        background: #fff;
+        border-color: #4b7598
+    }
+
+    #yddTopBorderlr {
+        border-color: #f0f8fc
+    }
+
+    #yddWrapper .ydd-sp {
+        background-image: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)
+    }
+
+    #yddWrapper a,
+    #yddWrapper a:hover,
+    #yddWrapper a:visited {
+        color: #50799b
+    }
+
+    #yddWrapper .ydd-tabs {
+        color: #959595
+    }
+
+    .ydd-tabs,
+    .ydd-tab {
+        background: #fff;
+        border-color: #d5e7f3
+    }
+
+    #yddBottom {
+        color: #363636
+    }
+
+    #yddWrapper {
+        min-width: 250px;
+        max-width: 400px;
+    }
+</style>
+
 </html>

@@ -1,0 +1,90 @@
+<!--头部 start-->
+<div class="header">
+    <!--logo start-->
+    <div class="content nav-top clrfix">
+        <!--#begineditable name="LOGO" clone="0" namechanged="0" order="0" ispublic="0" tagname="LOGO" viewid="125170" contype="" stylesysid="" layout="" action=""-->
+        <a href="{:url('Index/index2')}" class="logo fl"><img src="__TMPL__/public/pzzs/img/pz_logo.png" border="0" alt="招就处-招生网" title="招就处-招生网"></a>
+        <!--#endeditable-->
+        <h2 class="fl">招生信息网 </h2>
+    </div>
+    <p class="content zsdm">
+        <span>在豫招生代码</span>
+        <span class="dm">6271</span>
+    </p>
+    <!--logo end-->
+</div>
+<!--导航 start-->
+<!--#begineditable name="网站导航" clone="0" namechanged="0" order="2" ispublic="0" tagname="网站导航" viewid="125139" contype="" stylesysid="" layout="" action=""-->
+<div class="nav-main">
+    <ul class="clrfix content">
+        <navigation nav-id="" root="" id="" class=""
+                    max-level="0">
+            <navigationMenu>
+                <if condition="$level gt 1">
+                    <dd class="">
+                        <a href="{:url('index/actionList',array('id'=>$menu['id'],'parent_id'=>$menu['parent_id']))}" target="{$menu.target|default=''}">
+                            {$menu.name|default=''}
+                        </a>
+                    </dd>
+                    <else/>
+                    <li class="">
+                        <a href="<if condition="$menu['id'] eq 1">{:url('index/index')}<else/>{:url('index/actionList',array('id'=>$menu['id'],'parent_id'=>$menu['parent_id']))}</if>" target="{$menu.target|default=''}">
+                            {$menu.name|default=''}
+                        </a>
+                <div class="add-style"></div>
+
+                </li>
+                </if>
+            </navigationMenu>
+            <navigationFolder root=""
+                              class="{$menu.id}"
+                              dropdown="dl"
+                              dropdown-class="">
+                <a href="{:url('index/actionList',array('id'=>$menu['id'],'parent_id'=>$menu['parent_id']))}" class="" data-toggle="dropdown">
+                    {$menu.name|default=''}<span class="caret"></span>
+                </a>
+                <div class="add-style"></div>
+            </navigationFolder>
+        </navigation>
+    </ul>
+    <div class="nav-icon"><img src="__TMPL__/public/pzzs/img/nav-icon.png"></div>
+</div>
+<!--#endeditable-->
+<!--导航 end-->
+<!--头部 end-->
+<!--banner start-->
+<!--#begineditable contype="" name="幻灯片" action="" layout="" clone="0" namechanged="0" order="0" ispublic="0" tagname="幻灯片" viewid="180632" stylesysid=""-->
+<script language="javascript" src="__TMPL__/public/pzzs/js/dynclicks.js"></script>
+<div class="banner">
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class="on"></li>
+            </ul>
+        </div>
+        <div class="bd">
+            <div class="tempWrap">
+                <ul>
+                    <li onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 29324)" class="clone" ><img src="__TMPL__/public/pzzs/img/banner3.jpg" width="100%"></li>
+                    <li onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 29166)" ><img src="__TMPL__/public/pzzs/img/banner1.jpg" width="100%"></li>
+
+                    <li onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 29165)" ><img src="__TMPL__/public/pzzs/img/banner2.jpg" width="100%"></li>
+
+                    <li onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 29324)" ><img src="__TMPL__/public/pzzs/img/banner3.jpg" width="100%"></li>
+
+                    <li onclick="_addDynClicks(&quot;wbimage&quot;, 1352980990, 29166)" class="clone" ><img src="__TMPL__/public/pzzs/img/banner1.jpg" width="100%"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--&lt;!&ndash; 下面是前/后按钮代码，如果不需要删除即可 &ndash;&gt;-->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+    </div>
+
+</div>
+
+<!--#endeditable-->
+<!--banner end-->

@@ -24,6 +24,18 @@ class HomeBaseController extends BaseController
         parent::_initialize();
         $siteInfo = cmf_get_site_info();
         View::share('site_info', $siteInfo);
+        View::share('rand', cmf_random_string());
+        // 导航id
+        View::share('id',input('id'));
+//        Session::set('id',input('id'));
+        if(input('parent_id')==0){
+            View::share('parent_id',input('id'));
+//            Session::set('parent_id',input('id'));
+
+        }else{
+            View::share('parent_id',input('parent_id'));
+//            Session::set('parent_id',input('parent_id'));
+        }
     }
 
     public function _initializeView()
